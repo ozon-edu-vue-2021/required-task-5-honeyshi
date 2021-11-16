@@ -11,7 +11,7 @@
       <Button
         type="primary"
         @click="
-          $emit('click-add', {
+          addToCart({
             name: productName,
             image: image,
             price: price,
@@ -63,7 +63,7 @@ export default {
     },
   },
   methods: {
-    ...mapMutations(["toggleFavourite"]),
+    ...mapMutations(["toggleFavourite", "addToCart"]),
   },
   computed: {
     favouriteClass() {
@@ -72,7 +72,7 @@ export default {
   },
   data() {
     return {
-      qty: undefined,
+      qty: 1,
     };
   },
 };

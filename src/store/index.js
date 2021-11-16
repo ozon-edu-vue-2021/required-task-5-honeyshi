@@ -84,7 +84,6 @@ export default new Vuex.Store({
           };
         });
         context.commit("setProducts", products);
-        console.log(products);
       } catch (err) {
         console.error(err);
       }

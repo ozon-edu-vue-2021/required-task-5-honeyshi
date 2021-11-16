@@ -36,4 +36,9 @@ body,
   justify-content: space-between;
   align-items: center;
 }
+
+.ant-page-header-heading {
+  padding-top: 10px;
+  padding-right: 10px;
+}
 </style>

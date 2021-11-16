@@ -6,11 +6,12 @@
           <Button type="danger" icon="heart" size="large"> Избранное </Button>
         </router-link>
         <router-link to="/shopping-cart">
-          <Button type="primary" icon="shopping-cart" size="large">
-            Корзина
-          </Button>
+          <Badge :count="getProductsInShoppingCartCount">
+            <Button type="primary" icon="shopping-cart" size="large">
+              Корзина
+            </Button>
+          </Badge>
         </router-link>
-        <Badge :count="getProductsInShoppingCartCount" />
       </template>
     </PageHeader>
     <List :grid="{ gutter: 16, column: 4 }" :data-source="products">
@@ -21,7 +22,6 @@
           :productName="product.name"
           :id="product.id"
           :favourite="product.favourite"
-          @click-add="addToCart"
         />
       </Item>
     </List>

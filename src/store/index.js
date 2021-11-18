@@ -44,7 +44,8 @@ export default new Vuex.Store({
             ...product,
             favourite: !product.favourite,
           };
-        } else return product;
+        }
+        return product;
       });
     },
     updateProduct: (state, payload) => {
